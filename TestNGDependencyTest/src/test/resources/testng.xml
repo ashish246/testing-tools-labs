@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestDependency">
+
+	<test name="TestCase1">
+		<classes>
+			<class name="com.testng.dependent.demo.TestDependsOnGroup">
+			</class>
+			<class name="com.testng.dependent.demo.TestDatabase">
+			</class>
+			<class name="com.testng.dependent.demo.TestServer">
+			</class>
+		</classes>
+	</test>
+
+</suite>

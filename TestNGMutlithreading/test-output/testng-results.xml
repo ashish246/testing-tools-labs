@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Independent test Suite" duration-ms="40" started-at="2015-04-08T14:22:00Z" finished-at="2015-04-08T14:22:00Z">
+    <groups>
+    </groups>
+    <test name="Independent test" duration-ms="40" started-at="2015-04-08T14:22:00Z" finished-at="2015-04-08T14:22:00Z">
+      <class name="com.testng.parallel.demo.IndependentTest">
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.testng.parallel.demo.IndependentTest@184e19a1]" name="testMethod" duration-ms="15" started-at="2015-04-09T00:22:00Z" finished-at="2015-04-09T00:22:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.testng.parallel.demo.IndependentTest@184e19a1]" name="testMethod" duration-ms="16" started-at="2015-04-09T00:22:00Z" finished-at="2015-04-09T00:22:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.testng.parallel.demo.IndependentTest@184e19a1]" name="testMethod" duration-ms="15" started-at="2015-04-09T00:22:00Z" finished-at="2015-04-09T00:22:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.testng.parallel.demo.IndependentTest@184e19a1]" name="testMethod" duration-ms="1" started-at="2015-04-09T00:22:00Z" finished-at="2015-04-09T00:22:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.testng.parallel.demo.IndependentTest@184e19a1]" name="testMethod" duration-ms="1" started-at="2015-04-09T00:22:00Z" finished-at="2015-04-09T00:22:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.testng.parallel.demo.IndependentTest@184e19a1]" name="testMethod" duration-ms="1" started-at="2015-04-09T00:22:00Z" finished-at="2015-04-09T00:22:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+      </class> <!-- com.testng.parallel.demo.IndependentTest -->
+    </test> <!-- Independent test -->
+  </suite> <!-- Independent test Suite -->
+</testng-results>

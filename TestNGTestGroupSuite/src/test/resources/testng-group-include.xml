@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+	<test name="database">
+		<groups>
+			<run>
+				<!-- Regex can also be used in the group names like below -->
+				<exclude name="brokenTests.*" />
+				<include name=".*db" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.testng.suite.demo.TestSuiteDatabase" />
+		</classes>
+	</test>
+
+</suite>

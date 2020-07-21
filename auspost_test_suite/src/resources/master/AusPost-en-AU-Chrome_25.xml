@@ -1,0 +1,5342 @@
+<suite name="AusPostTest" verbose="10">
+   <parameter name="site" value="AusPost" />
+   <parameter name="locale" value="en-AU" />
+   <parameter name="channel" value="Shop" />
+   <parameter name="selenium.host" value="localhost" />
+   <parameter name="selenium.browser" value= "*chrome" />
+   <parameter name="selenium.browser.version" value= "25" />
+  <listeners>
+       <listener class-name="com.intershop.testframework.utils.SuiteReportUtils"/>
+       <listener class-name="com.intershop.testframework.utils.ReportUtil"/>
+    </listeners>
+<!-- Site Navigation test cases start-->
+	<test name="AP01A~HD1-1~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="clickBrandLogo" />
+					<include name="aboutUsLink" />
+					<include name="locationAndHourLink" />
+					<include name="helpAndSupportLink" />
+					<include name="businessSolutionsLink" />
+					<include name="parcelsAndMailLink" />
+					<include name="financeAndInsuranceLink" />
+					<include name="passportAndIDLink" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~HP2-12~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="clickFeatureBanner" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~HD3-2~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="signInLink" />
+					<include name="closePopUPWindow" />
+					<include name="registerInLink" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="AP01A~HD3-3~02" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="signInLink" />
+					<include name="signInWithoutAnyInformation" />
+					<include name="signInWithoutPassword" />
+					<include name="signInWithoutEmail" />
+					<include name="signInWithIncorrectPassword" />
+					<include name="signInWithCorrectCredentials" />
+					<include name="signOutLink" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~HD5-4~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="showEmptyCart" />
+					<include name="mouseOverEmptyMiniCartIcon" />
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=1712360"/>
+					</include>
+					<include name="addToCart" />
+					<include name="itemsInCart" />
+					<include name="mouseOverMiniCartIconWithItems" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~HD3-5~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="anonymousUser" />
+					<include name="signInLink" />
+					<include name="signInWithCorrectCredentials" />
+					<include name="headerForSignedUser" />
+					<include name="myShopAccountPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~HD4-6~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="globalShopPage" />
+					<include name="shopHomePage" />
+					<include name="mouseOverPackAndPost" />
+					<include name="mouseOverGiftAndTravel" />
+					<include name="mouseOverHomeAndOffice" />
+					<include name="mouseOverStampAndCoinCollectables" />
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewPostAndParcelSubCategoryPage"/>
+					<include name="viewPostAndParcel3rdLevelPage"/>
+					<include name="shopHomePage" />
+					<include name="viewGiftAndTravelLandingPage" />
+					<include name="viewGiftAndTravelSubCategoryPage" />
+					<include name="viewHomeAndOfficeLandingPage" />
+					<include name="viewHomeAndOfficeSubCategoryPage" />
+					<include name="viewHomeAndOffice3rdLevelPage" />
+					<include name="viewStampAndCoinCollectablesLandingPage" />
+					<include name="viewStampAndCoinCollectablesSubCategoryPage" />
+					<include name="viewStampAndCoinCollectables3rdLevelPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~FP1-7~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewPromotionAndofferWithoutName" />
+					<include name="viewPromotionAndofferWithoutEmail" />
+					<include name="viewPromotionAndofferWithInvalidEmail" />
+					<include name="viewPromotionAndofferWithSuccess" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~FP2-8~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewPricingAndPostageGuide" />
+					<include name="viewJobsPage" />
+					<include name="aboutUsLink" />
+					<include name="viewMediaCentrePage" />
+					<include name="locationAndHourLink" />
+					<include name="businessSolutionsLink" />
+					<include name="viewTravelPage" />
+					<include name="viewStampsAndCollectablesPage" />
+					<include name="viewGiftAndRetailCataloguePage" />
+					<include name="viewClickAndSendPage" />
+					<include name="viewSiteMapPage" />
+					<include name="viewAboutUsSitePage" />
+					<include name="viewTeamAndConditionsPage" />
+					<include name="viewPrivacyPolicyPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~FP4A-9~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewFacebookPage" />
+					<include name="viewPInterestPage" />
+					<include name="viewTwitterPage" />
+					<include name="viewYouTubePage" />
+					<include name="viewGooglePlusPage" />
+					<include name="viewShareLink" />
+					<include name="viewFacebookLoginPage" />
+					<include name="viewTwitterLoginPage" />
+					<include name="viewDeliciousLoginPage" />
+					<include name="viewLinkedInLoginPage" />
+					<include name="viewPrinterFriedlyLoginPage" />
+					<include name="viewDiggLoginPage" />
+					<include name="viewBitlyLoginPage" />
+					<include name="viewMoreToolBox" />
+					<include name="viewEmailToolbox" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01A~FP5-10~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewFeedbackPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~HP4-14~02" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~HP4-14~03" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewFeatureBannerProductList" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~HP4-14~04" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewIcamWidgetPages" />
+					<include name="viewTrackAnItemPage" />
+					<include name="viewCalculatePostagePage" />
+					<include name="viewFindaPostcodePage" />
+					<include name="viewConvertCurrencyPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~HP4-14~05" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="launchHomePage" />
+					<include name="viewContentSlot1" />
+					<include name="viewContentSlot2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01A~HP4-14~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewMostPopularSection" />
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=310453"/>
+					</include>
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity3"/>
+					</include>
+					<include name="addToCart" />
+					<include name="itemsInCart" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP1C-18~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP1C-17~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="backToHomePage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~KSR4-20~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="sortProductByPriceLowToHigh">
+					</include>
+					<include name="sortProductByPriceHighToLow">
+					</include>
+					<include name="sortProductByPopularity">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP2-21~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewAllProducts" >
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP3-23~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewProductFromRefinementPanel" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP3-24~01" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewProductFromRefinementPanel" />
+					<include name="backToExpressPostPanel" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP3-24~02" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewPackSize500gProducts" />
+					<include name="uncheck500gProducts" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP3-25~02" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewProductFromRefinementPanel" />
+					<include name="backToPackAndPostPanel" />
+					<include name="view1dayProducts" />
+					<include name="backToExpressPostPanel" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP3-25~03" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewNextPage" />
+					<include name="viewBuyNowMatrix" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP3-25~04" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="viewNextPage" />
+					<include name="viewBuyNowMatrix" />
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity3"/>
+					</include>
+					<include name="addToCart" />
+					<include name="hideBuyNowMatrix" />
+					<include name="productDetailPage">
+						<parameter name="productSKU" value="SKU=eps_3kg_master"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~QVSA-29~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewPostAndParcelLandingPage" />
+					<include name="quickViewPackAndParcelProducts" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PP5-28~05" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage">
+						<parameter name="productSKU" value="SKU=6721134"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP1-31~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=eps_500_master"/>
+					</include>
+					<include name="viewPostAndParcel3rdLevelPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP1-31~04" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=eps_500_master"/>
+					</include>
+					<include name="viewFacebookPage" />
+					<include name="viewPInterestPage" />
+					<include name="viewTwitterPage" />
+					<include name="viewYouTubePage" />
+					<include name="viewGooglePlusPage" />
+					<include name="viewShareLink" />
+					<include name="viewFacebookLoginPage" />
+					<include name="viewTwitterLoginPage" />
+					<include name="viewDeliciousLoginPage" />
+					<include name="viewLinkedInLoginPage" />
+					<include name="viewPrinterFriedlyLoginPage" />
+					<include name="viewDiggLoginPage" />
+					<include name="viewBitlyLoginPage" />
+					<include name="viewMoreToolBox" />
+					<include name="viewEmailToolbox" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP1-31~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=eps_500_master"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP7-35~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=eps_500_master"/>
+					</include>
+					<include name="viewPaymentAndDelivery">
+					</include>
+					<include name="viewReturnsAndRefunds">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP7-35~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=6721134"/>
+					</include>
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity3"/>
+					</include>
+					<include name="addToCart"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP5-37~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewWeAlsoRecommendSection">
+						<parameter name="productSKU" value="SKU=eps_500_master"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01B~PPP5-38~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="verifyContentAreaMessage">
+						<parameter name="productSKU" value="SKU=eps_500_master"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT1A-39~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="backToHomePage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT1A-39~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT1A-39~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="sortProductByPriceLowToHigh">
+					</include>
+					<include name="sortProductByPriceHighToLow">
+					</include>
+					<include name="sortProductByPopularity">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT5B-43~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewAllProducts" >
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT6-48~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT4-67~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewWeAlsoRecommendForCategoryPage">
+						<parameter name="categoryURL" value="CategoryDomainName=AusPost-Shop-GT&amp;CategoryName=GT&amp;ViewType=1">
+						</parameter>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT6-48~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=6717251"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT6-48~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590201"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~ID10-51~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=6717251"/>
+					</include>
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity2"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~ID10-52~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=6717251"/>
+					</include>
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity25"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01C~ID5-53~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590215"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~ID6-55~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=1514759"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~ID10-56~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=TSIMMI"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~ID10-57~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=TSIMMI"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVG2-64~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="quickViewGiftAndTravelProducts"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVG2-64~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewGiftAndTravelSubCategoryPage"/>
+					<include name="quickViewGiftCardsProducts"/>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=TSIMMI"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="quickViewLoadAndGoProducts"/>
+					<include name="viewLoadAndGoSubCategoryPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT3-66~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewGiftCardSubCategoryPage"/>
+					<include name="viewAustralianPostsProducts" />
+					<include name="backToPackAndPostPanel" />
+					<include name="viewLoadAndGoSubCategoryPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01C~QVL1-65~04" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewGiftCardSubCategoryPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01C~GT4-67~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewWeAlsoRecommendForCategoryPage">
+						<parameter name="categoryURL" value="CategoryDomainName=AusPost-Shop-GT&amp;CategoryName=GT-GCARD">
+						</parameter>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590207"/>
+					</include>
+					<include name="viewAustralianPostsProducts"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~06" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590201"/>
+					</include>
+					<include name="printProductPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~07" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewWeAlsoRecommendSection">
+						<parameter name="productSKU" value="SKU=0590201"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~08" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="verifyContentAreaMessage">
+						<parameter name="productSKU" value="SKU=0590201"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~05" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590201"/>
+					</include>
+					<include name="viewFacebookPage" />
+					<include name="viewPInterestPage" />
+					<include name="viewTwitterPage" />
+					<include name="viewYouTubePage" />
+					<include name="viewGooglePlusPage" />
+					<include name="viewShareLink" />
+					<include name="viewFacebookLoginPage" />
+					<include name="viewTwitterLoginPage" />
+					<include name="viewDeliciousLoginPage" />
+					<include name="viewLinkedInLoginPage" />
+					<include name="viewPrinterFriedlyLoginPage" />
+					<include name="viewDiggLoginPage" />
+					<include name="viewBitlyLoginPage" />
+					<include name="viewMoreToolBox" />
+					<include name="viewEmailToolbox" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~GT3-66~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590201"/>
+					</include>
+					<include name="viewPaymentAndDelivery">
+					</include>
+					<include name="viewReturnsAndRefunds">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01C~QVL1-65~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewLoadAndGoSubCategoryPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="AP01E~LG1A-87~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewLoadAndGoSubCategoryPage"/>
+					<include name="addToCart" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01E~LG1A-87~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewLoadAndGoSubCategoryPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01E~LG2-89~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewGiftAndTravelLandingPage"/>
+					<include name="viewLoadAndGoSubCategoryPage"/>
+					<include name="selectLoadAndGoSKU"/>
+					<include name="invalidAccessCode1"/>
+					<include name="invalidAccessCode2"/>
+					<include name="invalidAccessCode3"/>
+					<include name="invalidAccessCode4"/>
+					<include name="validAccessCode"/>
+					<include name="invalidMemorableWord1"/>
+					<include name="invalidMemorableWord2"/>
+					<include name="invalidMemorableWord3"/>
+					<include name="validMemorableWord"/>
+					<include name="invalidMobileNumber1"/>
+					<include name="invalidMobileNumber2"/>
+					<include name="invalidMobileNumber3"/>
+					<include name="validMobileNumber"/>
+					<include name="invalidDOB1"/>
+					<include name="invalidDOB2"/>
+					<include name="invalidDOB3"/>
+					<include name="invalidDOB4"/>
+					<include name="invalidDOB5"/>
+					<include name="validDOB"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO1A-93~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+					<include name="backToHomePage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO1A-93~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO4-95~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewWeAlsoRecommendForCategoryPage">
+						<parameter name="categoryURL" value="CategoryDomainName=AusPost-Shop-HomeOffice&amp;CategoryName=HomeOffice&amp;ViewType=1">
+						</parameter>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO5-96~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+					<include name="sortProductByPriceLowToHigh">
+					</include>
+					<include name="sortProductByPriceHighToLow">
+					</include>
+					<include name="sortProductByPopularity">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+					<include name="viewHomeAndOfficeSubCategoryPage" />
+					<include name="viewNextPage" />
+					<include name="viewPreviousPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+					<include name="viewTeleCommunicationsPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+					<include name="viewTeleCommunicationsPage" />
+					<include name="viewAccessoriesPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~04" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewHomeAndOfficeLandingPage"/>
+					<include name="viewTeleCommunicationsPage" />
+					<include name="viewMobilePrePaidPage" />
+					<include name="viewMobilePrePaidCategories" />
+					<include name="viewTelstraCategoryPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~05" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590212"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~06" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590212"/>
+					</include>
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity2"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01F~HO7-98~07" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0590212"/>
+					</include>
+					<include name="updateProductQuantity">
+						<parameter name="xmlMethodName" value="updateProductQuantity25"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~SSC1A-109~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewStampAndCoinCollectablesLandingPage"/>
+					<include name="backToHomePage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~SSC1A-109~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewStampAndCoinCollectablesLandingPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~SS3A-111~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewStampAndCoinCollectablesLandingPage"/>
+					<include name="viewImpressionsSubCategoryPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~SS3A-111~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewStampAndCoinCollectablesLandingPage"/>
+					<include name="uncheck500gProducts"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~SS3A-111~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewStampAndCoinCollectablesLandingPage"/>
+					<include name="uncheck500gProducts"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~BP7A-118~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0903320"/>
+					</include>
+					<include name="viewPaymentAndDelivery">
+					</include>
+					<include name="viewReturnsAndRefunds">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~BP7A-118~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0903320"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~BP7A-119~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0310416"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~BP7A-119~02" preserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0903320"/>
+					</include>
+					<include name="viewFacebookPage" />
+					<include name="viewPInterestPage" />
+					<include name="viewTwitterPage" />
+					<include name="viewYouTubePage" />
+					<include name="viewGooglePlusPage" />
+					<include name="viewShareLink" />
+					<include name="viewFacebookLoginPage" />
+					<include name="viewTwitterLoginPage" />
+					<include name="viewDeliciousLoginPage" />
+					<include name="viewLinkedInLoginPage" />
+					<include name="viewPrinterFriedlyLoginPage" />
+					<include name="viewDiggLoginPage" />
+					<include name="viewBitlyLoginPage" />
+					<include name="viewMoreToolBox" />
+					<include name="viewEmailToolbox" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~BP7A-120~01" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="viewWeAlsoRecommendSection">
+						<parameter name="productSKU" value="SKU=0903320"/>
+					</include>
+				</methods>
+			</class>
+	    </classes>
+ 	</test>
+	<test name="AP01G~BP7A-120~02" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=0903320"/>
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AP01G~BP7A-120~03" reserve-order="true">
+		<classes>
+			<class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+				<methods>
+					<include name="productDetailPage3">
+						<parameter name="productSKU" value="SKU=1514640"/>
+					</include>
+					<include name="printProductPage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+<!-- Site Navigation test cases end -->
+
+<!-- Site interaction test cases Start-->
+ 	<test name="AP03B~ID-10~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="verifyMinQuantity" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~ID-10~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+				<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity2"/>
+				</include>
+				<include name="verifyErrorMinQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~ID-10~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+				<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity0"/>
+				</include>
+	        	<include name="verifyErrorMinQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~ID-10~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="verifyMaxQuantity" />
+
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~ID-10~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity10"/>
+				</include>
+				<include name="verifyErrorMaxQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~ID-10~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity0"/>
+				</include>
+				<include name="verifyErrorMinQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~HD-5~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="addToCart" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~HD-5~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage"/>
+				<include name="addToCart" />
+	        	<include name="addToCart2" />
+	        	
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~HD-5~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage"/>
+				<include name="addToCart" />
+				<include name="productDetailPage2">
+					<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+	        	
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03B~FP-4a~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage"/>
+	        	<include name="clickOnFaceBookLink"/>
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03C~HD-5~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="mouseOverMiniCart" />
+	        	<include name="removePLIFromMiniCart" />
+	   		</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03C~HD-5~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="mouseOverEmptyMiniCart" />
+				<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03C~HD-5~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="productDetailPage2">
+					<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+				<include name="productDetailPage3">
+					<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="addToCart3" />
+				<include name="productDetailPage4">
+					<parameter name="productSKU" value="SKU=0590205"/>
+				</include>
+	        	<include name="addToCart4" />
+	        	<include name="mouseOverMiniCart" />
+				<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP03C~HD-5~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="productDetailPage2">
+					<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+				<include name="productDetailPage3">
+					<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="addToCart3" />
+				<include name="productDetailPage4">
+					<parameter name="productSKU" value="SKU=0590205"/>
+				</include>
+	        	<include name="addToCart4" />
+	        	<include name="viewCart" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ <!-- Site interaction test cases end-->
+ 	
+ <!-- Keyword search test cases start-->
+ 	
+ 	<test name="AP02A~1~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="clickSearchButton" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02A~2~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" />
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="3000"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02A~2~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" />
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="selectAutoSuggestValue" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02A~3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Stamp"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="selectAutoSuggestValue" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02A~4~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="express post"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="selectAutoSuggestValue" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02A~5~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="stamps + postcards"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~6~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Pock"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="verifyDidYouMeanText" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~7~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Pock"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="verifyClosestMatch" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~8~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Unknown Term"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="verifyZeroResults" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~9~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="0050168"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="verifyproductDetails" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~10~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Stamp"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="sortSearchResults" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~10~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Stamp"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="sortSearchResults" >
+					<parameter name="xmlMethodName" value="sortByPopularity"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~14~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Stamp"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="clickHomeFromBreadCrumb" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~14~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Stamp"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="clickProductImage" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ 	<test name="AP02B~14~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="Stamp"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="clickProductTitle" />
+			</methods>
+	      </class>
+	    </classes>    
+ 	</test>
+ <!-- Keyword search test cases end-->
+ 	
+ <!-- Registering with AP test cases start-->
+
+	<test name="AP04A~FYP-1a" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+				<include name="forgotPasswordPage" />
+	        </methods> 
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~FYP-4~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+				<include name="forgotPasswordPage" />
+				<include name="forgotPasswordBlankmail" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~FYP-4~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+				<include name="forgotPasswordPage" />
+				<include name="forgotPasswordWrongEmail" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~FYP-5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+				<include name="forgotPasswordPage" />
+				<include name="forgotPasswordCorrectEmail" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~SCS-1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount">
+					<parameter name="xmlMethodName" value="postCheckoutAccountShortPassword"/>	
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount">
+					<parameter name="xmlMethodName" value="postCheckoutAccountLongPassword"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount">
+					<parameter name="xmlMethodName" value="postCheckoutAccountDiffPasswordConfirmation"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount"/>
+				<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="verifyOrderConfirmation"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="closePopup"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount">
+					<parameter name="xmlMethodName" value="postCheckoutAccountBlankPassword"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04A~OCS-1~9" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount">
+					<parameter name="xmlMethodName" value="postCheckoutAccountBlankConfirmPassword"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+  	<test name="AP04B~RP-1A_RP-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	 <test name="AP04B~RP-4~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationBlankEmail"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	 <test name="AP04B~RP-4~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationExistingEmail"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	 <test name="AP04B~RP-4~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationInvalidEmail"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationBlankPassword"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationShortPassword"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationLongPassword"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationBlankConfirmPassword"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationDifferentConfirmPassword"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~9" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationBlankTermsCondition"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~10" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration">
+					<parameter name="xmlMethodName" value="completeRegistrationAllBlankData"/>
+				</include>
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-4~11" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="cancelOnRegistrationPage"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~RP-5_MA-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MA-5~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+	        	<include name="clickMyAccount" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-1a_MAE-1b_MAE-1c_MAE-1d_MAE-1e_MAE-1f~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-1a_MAE-1b_MAE-1c_MAE-1d_MAE-1e_MAE-1f~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="updateProfile">
+					<parameter name="xmlMethodName" value="updateProfileBlankFirstName"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-1a_MAE-1b_MAE-1c_MAE-1d_MAE-1e_MAE-1f~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+			<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="updateProfile">
+					<parameter name="xmlMethodName" value="updateProfileBlankLastName"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-1a_MAE-1b_MAE-1c_MAE-1d_MAE-1e_MAE-1f~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="updateProfile">
+					<parameter name="xmlMethodName" value="updateProfileBlankPhone"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-1a_MAE-1b_MAE-1c_MAE-1d_MAE-1e_MAE-1f~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="updateProfile">
+					<parameter name="xmlMethodName" value="updateProfileInvalidPhone"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-1a_MAE-1b_MAE-1c_MAE-1d_MAE-1e_MAE-1f~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="updateProfile"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="incorrectCurrentPassword"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="incorrectCurrentPassword3Times"/>
+				</include>
+				<include name="verifyIncorrectPassword3TimesError"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="blankNewPassword"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="shortNewPassword"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="longNewPassword"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="blankConfirmPassword"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04B~MAE-2a_MAE-2b_MAE-2c_MAE-2d~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickMyAccount" />
+				<include name="clickEditDetailsButton" />
+				<include name="changePassword">
+					<parameter name="xmlMethodName" value="differentConfirmPassword"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4a_AB-5~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~2_AB-4b~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankFirstName"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankLastName"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankPhoneNumber"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsInvalidPhoneNumber"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankMandatFields"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~14" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="selectAustralia"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~15" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="selectInternationalCountry"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~16" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankPostCode"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~17" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankAddress"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~18" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankCity"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~19" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankState"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~20" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsBlankCountry"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4b~22_AB-4a~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsComplete"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4a~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsComplete"/>
+				</include>
+				<include name="editBillingAddress" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-4a~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsComplete"/>
+				</include>
+				<include name="editBillingAddress" />
+				<include name="modifyBillingDetails" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~1_AB-5_AB-6~2_AB-5_AB-6~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="selectDeliveryAus"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~9" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="selectDeliveryInterCountry"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~10" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsBlankPostalCode"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~11" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsBlankAddress"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~12" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsBlankCity"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~13" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsBlankState"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~15" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsBlankMandatFields"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~16_AB-5_AB-6~17" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsComplete"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04D~AB-5_AB-6~18_AB-5_AB-6~19_AB-5_AB-6~20_AB-5_AB-6~21_AB-5_AB-6~22_AB-5_AB-6~23" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewDeliveryAddress" />
+				<include name="newDeliveryDetails">
+					<parameter name="xmlMethodName" value="newDeliveryDetailsComplete"/>
+				</include>
+				<include name="clickAddNewDeliveryAddress2" />
+				<include name="addDeliveryAddressComplete">
+					<parameter name="xmlMethodName" value="addDeliveryAddressComplete"/>
+				</include>
+				<include name="clickAddNewDeliveryAddress3" />
+				<include name="addDeliveryAddressComplete2">
+					<parameter name="xmlMethodName" value="addDeliveryAddressComplete2"/>
+				</include>
+				<include name="clickEditDeliveryAddress" />
+				<include name="modifyDeliveryAddress">
+					<parameter name="xmlMethodName" value="modifyDeliveryAddress"/>
+				</include>
+				<include name="setPrimaryDeliveryAddress" />
+				<include name="removeDeliveryAddress" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~OH-3~1_OH-4~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="clickOrderHistory" />
+				<include name="verifyZeroOrders" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~OH-4~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickOrderHistory" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~OH-4~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickOrderHistory" />
+				<include name="clickViewOrder" />
+				<include name="VerifyTrackOrder" />
+				<include name="clickTrackOrders" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~OH-4~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickOrderHistory" />
+				<include name="clickViewOrder" />
+				<include name="clickNextOrder" />
+				<include name="clickPreviousOrder" />
+				<include name="clickBackToAllOrders" />
+				<include name="VerifyTrackOrder" />
+				<include name="clickTrackOrders" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~OH-4~7_VO-5~1_VO-5~2_VO-5~3_VO-5~4_VO-5~5_VO-5~6_OH-4~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickOrderHistory" />
+				<include name="clickViewOrder" />
+				<include name="clickNextOrder" />
+				<include name="clickPreviousOrder" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~VO-6~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickOrderHistory" />
+				<include name="clickViewOrder" />
+				<include name="clickPrintOrder" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04E~VO-6~2_VO-6_RO-1~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickOrderHistory" />
+				<include name="clickViewOrder" />
+				<include name="clickPlaceOrderAgain" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SC-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SC-4~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="verifyZeroSavedCarts"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCM~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+		       	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="verifyTenSavedCarts"/>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCM~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+		       	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="SaveEleventhCart"/>	
+				</include>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SC-4_SCDS-6~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCD-4_SCDS-9a~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+				<include name="clickBackToSavedCarts"/>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCDS-6~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+				<include name="removeItemFromSavedCart"/>	
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCDS-9c~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+				<include name="checkoutFromSavedCart"/>	
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCDS-9c~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+				<include name="deleteSavedCart"/>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCDS-9d~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+				<include name="checkoutFromSavedCart"/>	
+				<include name="cancelCheckoutFromSavedCart"/>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP04F~SCDS-9e~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	       <methods>
+				<include name="launchHomePage" />
+				<include name="signInPage" />
+	        	<include name="signIn" >
+	        		<parameter name="xmlMethodName" value="TenSavedCartsSignIn"/>
+	        	</include>
+	        	<include name="myShopAccount" />
+				<include name="clickSaveCarts"/>
+				<include name="viewSavedCart"/>
+				<include name="checkoutFromSavedCart"/>	
+				<include name="confirmCheckoutFromSavedCart"/>
+	    	</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ <!-- Registering with AP test cases end-->
+ 	
+ <!-- Checkout & Shopping cart test cases start-->
+ 	
+ 	<test name="AP06A~YD-2_YD-3_YD-5_YD-7~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="signedInCheckoutStep2Validation" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~YD-2~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~YD-2~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="forgotPasswordPage" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~YD-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" >
+					<parameter name="xmlMethodName" value="anonymousCheckoutBlankEmail"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~YD-3~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" >
+					<parameter name="xmlMethodName" value="anonymousCheckoutInvalidEmail"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~YD-3~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" >
+					<parameter name="xmlMethodName" value="anonymousCheckoutBlankFirstName"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~YD-3~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" >
+					<parameter name="xmlMethodName" value="anonymousCheckoutBlankLastName"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>	
+	<test name="AP06A~YD-3~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" >
+					<parameter name="xmlMethodName" value="anonymousCheckoutBlankFirstAndLastName"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~YD-3~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" >
+					<parameter name="xmlMethodName" value="anonymousCheckoutBlankData"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~YD-2_YD-3_YD-7~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutStep2Validation" />
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+
+ 	<test name="AP04A~YD-6_8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~HSO-2b~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="checkoutSignInIncorrectPassword"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~HSO-2b~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="checkoutSignInLockAccount"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~HSO-2b~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="checkoutSignInBlankData"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~HSO-2b~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="checkoutSignInBlankPassword"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~HSO-2b~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="checkoutSignInBlankEmail"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~HSO-2b~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="checkoutSignInInvalidEmail"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~YD-6_8_DD-4_DD-2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="navigateToDeliveryDetails"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~YD-4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="navigateToShoppingcart"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation">
+					<parameter name="xmlMethodName" value="verifyInternationalShippingLocation"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+		<test name="AP06A~DD-3~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInOneInternationalAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation">
+					<parameter name="xmlMethodName" value="verifyPreFilledAUShippingLocation"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInOneAustralianAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation">
+					<parameter name="xmlMethodName" value="verifyEmptyShippingLocation"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInTwoInternationalAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>	
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInTwoInternationalAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation">
+					<parameter name="xmlMethodName" value="verifyInternationalShippingLocation"/>	
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>	
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInTwoInternationalAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation">
+					<parameter name="xmlMethodName" value="verifyMultipleShippingLocation"/>	
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~9" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>	
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInTwoAustralianAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation">
+					<parameter name="xmlMethodName" value="verifyMultipleShippingLocation"/>	
+				</include>
+				<include name="selectAUShippingAddress"/>
+				<include name="verifyAUShippingAddressError"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~10" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInTwoInternationalAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation"/>
+				<include name="selectInternationalShippingAddress"/>
+				<include name="verifyInternationalShippingAddressError"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~11" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="continueCheckout"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~12" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="continueCheckout"/>
+				<include name="verifyAnonymousShippingError"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~13" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToYourDetails"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~14" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToYourDetails"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~15" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~16" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToYourDetails"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~17" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToShoppingCart"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~18" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="selectDifferentBillingAddress"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~19" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="selectDifferentShippingAddress"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	 <test name="AP06A~DD-3~20" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn">
+					<parameter name="xmlMethodName" value="signInBlankAddress"/>	
+				</include>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="addNewShippingAddress"/>
+				<include name="newShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~21" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	 <test name="AP06A~DD-3~22" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankFirstName"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~23" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankLastName"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~24" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankAddress"/>
+				</include>
+		   </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~25" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankCity"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~26" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankPostCode"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~27" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankState"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~28" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankCountry"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~29" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankPhone"/>
+				</include>
+			 </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~DD-3~30" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="newShippingDetails">
+					<parameter name="xmlMethodName" value="shippingDetailsBlankData"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-6~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-6~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="clickOnPrivacyPolicy"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-6~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-6~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="clickTermsAndCondition"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-6~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="clickOnCSCLink"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-6~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="navigateToShoppingCart"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-6~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="navigateToYourDetails"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-6~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="clickDeliveryDetails"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	
+	<test name="AP06A~SP-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataWithoutTerms"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorWithoutTerms"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-3~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataBlankName"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorBlankName"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-3~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataInvalidCCNumber"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorInvalidCCNumber"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-3~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataBlankCCNumber"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorBlankCCNumber"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-3~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataBlankExpiryDate"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorBlankExpiryDate"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-3~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataPastExpiryDate"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorPastExpiryDate"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-3~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData">
+					<parameter name="xmlMethodName" value="testPaymentDataBlankCSC"/>
+				</include>
+				<include name="completePayment"/>
+				<include name="verifyErrorBlankCSC"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~SP-4d~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="previousOnPaymentPage"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~SP-4e~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~OC-5a~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="printOrderConfirmation"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+	<test name="AP06A~OC-5b_OCS-1~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="continueShopping"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP06A~OC-5b_OCS-1~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount"/>
+				<include name="completePostCheckoutAccount"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	
+ 	<test name="AP05A~CMS7~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+				<include name="addToCart" />
+				<include name="viewCart" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05A~CMS7~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="backToShopping" />
+				<include name="productDetailPage2">
+					<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+				<include name="viewCart2" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05A~CMS7~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart"/>
+				<include name="viewCart" />
+				<include name="backToShopping" />
+				<include name="productDetailPage2">
+					<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+				<include name="viewCart2" />
+				<include name="backToShopping2" />
+				<include name="productDetailPage3">
+					<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="addToCart3" />
+				<include name="viewCart3" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05A~CMS7~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="backToShopping" />
+				<include name="productDetailPageSame">
+					<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+				<include name="addToCart2" />
+				<include name="viewCart2" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05A~CM1~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="updateProductQuantity" />
+	        	<include name="addToCart" />
+				<include name="verifyErrorMinQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05A~CM1~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity10"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="verifyErrorMaxQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05A~VC-3~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	       			<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+				<include name="addToCart" />
+	        	<include name="viewCart" />
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~CM1~VC-4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1711287"/>
+				</include>
+	        	<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity3"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="viewCart" />
+	        	<include name="updatePLIQuantity" />
+	        	<include name="verifyErrorMinQuantityReq" />
+	        </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~CM2~VC-4~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="PSTAMP-137"/>
+				</include>
+	        	<include name="updateProductQuantity">
+	        		<parameter name="xmlMethodName" value="updateProductQuantity3"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="viewCart" />
+	        	<include name="updatePLIQuantity">
+	        		<parameter name="xmlMethodName" value="updatePLIQuantity6"/>
+				</include>
+				<include name="verifyErrorMaxQuantityReq" />
+	       </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~CM2~VC-4~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0310331"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="viewCart" />
+	        	<include name="updatePLIQuantity">
+	        		<parameter name="xmlMethodName" value="updatePLIQuantity2"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~CM2~VC-4~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+	        	<include name="viewCart" />
+	        	<include name="removePLI" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~CM2~VC-3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="viewCart" />
+	        	<include name="removePLI">
+	        		<parameter name="xmlMethodName" value="removeLastPLI"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~SH3~VCCM~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+	        	<include name="signOut" />
+	        	<include name="delay">
+	        		<parameter name="milliseconds" value="30000"/>
+				</include>
+	        	<include name="signInPage2" />
+	        	<include name="signIn2" />
+	        	<include name="viewCart" />
+	        	<include name="verifyCartRetainedProducts" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05B~SH3~VCCM~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="signInPage" />
+	        	<include name="signIn" />
+	        	<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+	        	<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart2" />
+	        	<include name="signOut" />
+	        	<include name="delay">
+	        		<parameter name="milliseconds" value="125000"/>
+				</include>
+	        	<include name="signInPage2" />
+	        	<include name="signIn2" />
+	        	<include name="viewEmptyCart" />
+	        	<include name="verifyCartIsEmpty" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05D~OC6~VCPD" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590205"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="verifyPromotionFreeGift" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05E~OC11~VC-7~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590214"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="updatePromotionCode">
+					<parameter name="xmlMethodName" value="updateValidPromotionCode"/>
+				</include>
+				<include name="verifyPromotionCode">
+					<parameter name="xmlMethodName" value="verifyValidPromotionCode"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05E~OC12~VC-7~7" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590214"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="updatePromotionCode">
+					<parameter name="xmlMethodName" value="updateInValidPromotionCode"/>
+				</include>
+				<include name="verifyPromotionCode">
+					<parameter name="xmlMethodName" value="verifyInValidPromotionCode"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05E~OC12~VC-7~8" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590203"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="updatePromotionCode">
+					<parameter name="xmlMethodName" value="updateInActivePromotionCode"/>
+				</include>
+				<include name="verifyPromotionCode">
+					<parameter name="xmlMethodName" value="verifyInActivePromotionCode"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05E~OC12~VC-7~9" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590203"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="updatePromotionCode">
+					<parameter name="xmlMethodName" value="updateBlankPromotionCode"/>
+				</include>
+				<include name="verifyPromotionCode">
+					<parameter name="xmlMethodName" value="verifyBlankPromotionCode"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05E~OC12~VC-7~10" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1712360"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="updatePromotionCode">
+					<parameter name="xmlMethodName" value="updateValidPromotionCode"/>
+				</include>
+				<include name="verifyPromotionCode">
+					<parameter name="xmlMethodName" value="verifyValidPromotionCode"/>
+				</include>
+				<include name="removePromoDiscount" />
+				<include name="verifyPromotionCode">
+					<parameter name="xmlMethodName" value="verifyPromotionCodeRemoved"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05F~VC-8~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05F~VC-8~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0050168"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />
+				<include name="removeRoundupDonation" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05F~VC-8~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590206"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />
+				<include name="backToShopping" />
+				<include name="viewCart2" />
+				<include name="verifyRoundUpDonation" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05F~VC-8~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0590206"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />
+				<include name="backToShopping" />
+				<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712352"/>
+				</include>
+				<include name="addToCart2" />
+				<include name="viewCart2" />
+				<include name="verifyDonationUpdated" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05G~VC-5~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=6721134"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712361"/>
+				</include>
+				<include name="addToCart2" />
+				<include name="viewCart" />
+				<include name="verifyShippingOption">
+					<parameter name="xmlMethodName" value="verifyDomesticShipping"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05G~VC-5~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=6721134"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712361"/>
+				</include>
+				<include name="addToCart2" />
+				<include name="productDetailPage3">
+	        		<parameter name="productSKU" value="SKU=0310424"/>
+				</include>
+				<include name="addToCart3" />
+				<include name="viewCart" />
+				<include name="verifyShippingOption">
+					<parameter name="xmlMethodName" value="verifyMixShipping"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05G~VC-5~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0310424"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712326"/>
+				</include>
+				<include name="addToCart2" />
+				<include name="viewCart" />
+				<include name="verifyShippingOption">
+					<parameter name="xmlMethodName" value="verifyInterShipping"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05G~VC-5~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0310424"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="productDetailPage2">
+	        		<parameter name="productSKU" value="SKU=1712326"/>
+				</include>
+				<include name="addToCart2" />
+				<include name="viewCart" />
+				<include name="verifyShippingOption">
+					<parameter name="xmlMethodName" value="verifyInterShipping"/>
+				</include>
+				<include name="selectShippingLocation">
+					<parameter name="xmlMethodName" value="internationalShippingLocation"/>
+				</include>
+				<include name="verifyShippingSelection">
+					<parameter name="xmlMethodName" value="verifyInternShipSelection"/>
+				</include>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05I~VC-10a~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="backToShopping" />
+				<include name="viewCart2" />
+				<include name="resetConfigViewCart" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05I~CM3~VCDV~VC-10b" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=6721134"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="verifyErrorMinCartValue" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05I~CM4~VCDV~VC-10b" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0310455"/>
+				</include>
+	        	<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="verifyErrorMaxCartValue" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~SCDS-9c~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~SCDS-9c~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+				<include name="cancelMoveItemsToCart" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~SCDS-9c~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+				<include name="continueMoveItemsToCart" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~SCDS-9c~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+				<include name="continueMoveItemsToCart" />
+				<include name="verifySavedCartRemoved" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~SCDS-9c~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0310343"/>
+				</include>
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyErrorMaxQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~SCDS-9c~6" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=0310404"/>
+				</include>
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyErrorMinQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05J~RO-1~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	        	<include name="signInPage" />
+	        	<include name="signIn" />
+				<include name="productDetailPage">
+	        		<parameter name="productSKU" value="SKU=1762005"/>
+				</include>
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="proceedToCheckout" />
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSaveCart" />
+				<include name="checkoutFromSavedCart" />
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyInventoryCheck" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~VO-6b~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~VO-6b~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+				<include name="cancelOrderAgain"/>
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~VO-6b~3" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+				<include name="continueMoveItemsToCart" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~VO-6b~4" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyErrorMaxQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~VO-6b~5" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyErrorMinQuantityReq" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~RO-1~1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyProductStock" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	<test name="AP05K~RO-1~2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+	       		<include name="productDetailPage" />
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation"/>
+				<include name="proceedToCheckout" />
+				<include name="checkoutSignIn"/>
+				<include name="navigateToDeliveryDetails"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>
+				<include name="placeOrderAgain"/>
+				<include name="continueMoveItemsToCart" />
+				<include name="verifyInventoryCheck" />
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ <!-- Checkout & Shopping cart test cases end-->
+
+<!-- Smoke test cases start-->
+   <test name="SmokeTest1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="updateProfile"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsComplete"/>
+				</include>				
+				<include name="viewPostAndParcelLandingPage" />
+				<include name="viewAllProducts" />				
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />				
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSavedCart"/>
+				<include name="checkoutFromSavedCart"/>	
+				<include name="confirmCheckoutFromSavedCart"/>
+				<include name="updateProductQuantity">
+					<parameter name="xmlMethodName" value="updateProductQuantity10"/>
+				</include>
+				<include name="selectShippingLocation2" />
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />
+				<include name="navigateToYourDetails"/>				
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>				
+				<include name="signOut" />
+	        	<include name="delay">
+	        		<parameter name="milliseconds" value="30000"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 
+ 	 <test name="SmokeTest2" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+	        <methods>
+	        	<include name="launchHomePage" />
+ 				<include name="typeSearchKeyword" >
+	       			<parameter name="searchKeyword" value="coin"/>
+	       		</include>
+	       		<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="clickSearchButton" />
+				<include name="viewNextPage" />
+					
+				<include name="viewSearchProductFromRefinementPanel" />		
+						
+				<include name="viewGiftAndTravelLandingPage"/>
+				<include name="viewLoadAndGoSubCategoryPage"/>	
+				<include name="selectLoadAndGoSKU"/>
+				<include name="validAccessCode"/>
+				<include name="validMemorableWord"/>
+				<include name="validMobileNumber"/>
+				<include name="validDOB"/>
+				
+				<include name="addToCart" />				
+				<include name="productDetailPage2">		
+					<parameter name="productSKU" value="SKU=0590201"/>		
+				</include>
+				<include name="addToCart2" />
+				<include name="viewCart" />				
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />				
+				<include name="removePLI"/>
+				<include name="proceedToCheckout" />
+				<include name="anonymousCheckoutDetails" />
+				<include name="navigateToDeliveryDetails"/>
+				<include name="anonymousCheckoutShippingDetails"/>
+				<include name="selectDifferentBillingAddress"/>		
+				<include name="anonymousCheckoutBillingDetails"/>		
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="createPostCheckoutAccount"/>
+				<include name="delay">
+	        		<parameter name="milliseconds" value="5000"/>
+				</include>
+				<include name="verifyOrderConfirmation"/>		
+				<include name="myShopAccount" />		
+				<include name="clickOrderHistory" />
+				<include name="clickViewOrder" />
+				<include name="clickPlaceOrderAgain" />				
+				<include name="signOutLink" />
+				<include name="clickNoSaveCart" />
+	        	<include name="delay">
+	        		<parameter name="milliseconds" value="30000"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	
+ 	<test name="SmokeTest3" preserve-order="true">
+	   
+ 	</test>
+ <!-- Smoke test cases end-->
+ </suite>

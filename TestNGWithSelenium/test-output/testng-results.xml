@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11653" started-at="2015-04-08T15:13:34Z" finished-at="2015-04-08T15:13:46Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11653" started-at="2015-04-08T15:13:34Z" finished-at="2015-04-08T15:13:46Z">
+      <class name="com.testng.selenium.demo.TestMultipleThreads">
+        <test-method status="PASS" signature="loadTestThisWebsite()[pri:0, instance:com.testng.selenium.demo.TestMultipleThreads@2b4b2d2d]" name="loadTestThisWebsite" duration-ms="11634" started-at="2015-04-09T01:13:34Z" finished-at="2015-04-09T01:13:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadTestThisWebsite -->
+      </class> <!-- com.testng.selenium.demo.TestMultipleThreads -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

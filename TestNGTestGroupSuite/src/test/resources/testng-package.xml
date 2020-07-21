@@ -1,0 +1,9 @@
+<suite name="TestAll">
+
+	<test name="order">
+		<packages>
+			<package name="com.testng.suite.demo.*" />
+		</packages>
+	</test>
+
+</suite>

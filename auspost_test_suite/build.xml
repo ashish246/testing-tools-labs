@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="executeTests" name="Ant file for TestNG">
+	
+	<property name="project" value="auspost_test_suite"/>
+	<property name="build.home" value="build_jenkins"/>
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+	<!-- Directory path of compiled classes(i.e *.class) -->
+	<path id="classes">
+		<pathelement location="bin"/>
+		<fileset dir="lib">
+			<include name="**/*.jar"/>
+			</fileset>
+	</path>
+	<!-- Define <testng> task -->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<fileset dir="lib">
+				<include name="**/*.jar"/>
+			</fileset>
+		</classpath>
+	</taskdef>
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask">
+		<classpath>
+			<fileset dir="lib">
+				<include name="**/*.jar"/>
+			</fileset>
+		</classpath>
+	</taskdef>
+
+	 <!-- Checks for Mandatory input values -->
+	<condition property="testName.set">
+        <and>
+            <isset property="testName"/>
+		</and>
+    </condition>
+	<condition property="browserName.set">
+		<and>
+			<isset property="browserName"/>
+		</and>
+	</condition>
+	<condition property="browserVersion.set">
+        <and>
+        	<isset property="browserVersion"/>
+		</and>
+	</condition>
+	
+	<target name="executeTests" depends="checkMandatoryFields">
+		<if>
+			<contains string="${browserName}" substring="firefox" />
+			<then>
+				
+				<ant antfile="${build.home}/firefox.xml"/>
+			</then>
+		</if>
+		<if>
+			<contains string="${browserName}" substring="chrome" />
+			<then>
+				<ant antfile="${build.home}/chrome.xml"/>
+			</then>
+		</if>
+		<if>
+			<contains string="${browserName}" substring="iexplorer" />
+			<then>
+				<ant antfile="${build.home}/iexplorer.xml"/>
+			</then>
+		</if>
+		<if>
+			<contains string="${browserName}" substring="safari" />
+			<then>
+				<ant antfile="${build.home}/safari.xml"/>
+			</then>
+		</if>
+		
+	</target>	
+	
+	<target name="checkMandatoryFields">
+	     <fail unless="testName.set">Must specify the TestName to execute</fail>
+		<fail unless="browserName.set">Must specify the browser name to execute</fail>
+	     <fail unless="browserVersion.set">Must specify the browser version to execute</fail>
+	</target>
+
+	<!-- Some Utilities Methods-->
+	<target name="consolidatePDF"> 
+		<java classname="com.intershop.testframework.utils.ConsolidatePDF" classpathref="classes">
+			 <arg value="Auspost"/>
+			 <arg value="Auspost-en-AU"/>
+			<classpath>
+				<fileset dir="lib">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
+	<target name="ArchiveFiles"> 
+		<java classname="com.intershop.testframework.utils.ArchiveFiles" classpathref="classes">
+			 <arg value="Auspost"/>
+			 <arg value="Auspost-en-AU"/>
+			<classpath>
+				<fileset dir="lib">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
+</project>

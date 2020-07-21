@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestAll" duration-ms="66" started-at="2015-04-08T11:49:20Z" finished-at="2015-04-08T11:49:20Z">
+    <groups>
+      <group name="shopping">
+        <method signature="TestConfiguration.runTest1()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="runTest1" class="com.testng.config.demo.TestConfiguration"/>
+      </group> <!-- shopping -->
+    </groups>
+    <test name="case1" duration-ms="32" started-at="2015-04-08T11:49:20Z" finished-at="2015-04-08T11:49:20Z">
+      <class name="com.testng.config.demo.TestConfiguration">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="beforeClass" is-config="true" duration-ms="1" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="beforeGroups" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeGroups -->
+        <test-method status="PASS" signature="runTest1()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="runTest1" duration-ms="6" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest1 -->
+        <test-method status="PASS" signature="afterGroups()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="afterGroups" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterGroups -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="runTest2()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="runTest2" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest2 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testng.config.demo.TestConfiguration@7d99eb6c]" name="afterClass" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.testng.config.demo.TestConfiguration -->
+      <class name="com.testng.config.demo.DBConfig">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.testng.config.demo.DBConfig@19f70605]" name="beforeTest" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.testng.config.demo.DBConfig@19f70605]" name="afterTest" is-config="true" duration-ms="1" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.testng.config.demo.DBConfig -->
+      <class name="com.testng.config.demo.TestDBConnection">
+        <test-method status="PASS" signature="runOtherTest1()[pri:0, instance:com.testng.config.demo.TestDBConnection@1c23cae6]" name="runOtherTest1" duration-ms="1" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runOtherTest1 -->
+        <test-method status="PASS" signature="runOtherTest2()[pri:0, instance:com.testng.config.demo.TestDBConnection@1c23cae6]" name="runOtherTest2" duration-ms="2" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runOtherTest2 -->
+      </class> <!-- com.testng.config.demo.TestDBConnection -->
+    </test> <!-- case1 -->
+    <test name="case2" duration-ms="7" started-at="2015-04-08T11:49:20Z" finished-at="2015-04-08T11:49:20Z">
+      <class name="com.testng.config.demo.DBConfig">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.testng.config.demo.DBConfig@624a240d]" name="beforeSuite" is-config="true" duration-ms="9" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.testng.config.demo.DBConfig@624a240d]" name="beforeTest" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.testng.config.demo.DBConfig@624a240d]" name="afterTest" is-config="true" duration-ms="1" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.testng.config.demo.DBConfig@624a240d]" name="afterSuite" is-config="true" duration-ms="0" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.testng.config.demo.DBConfig -->
+      <class name="com.testng.config.demo.TestDBConnection">
+        <test-method status="PASS" signature="runOtherTest1()[pri:0, instance:com.testng.config.demo.TestDBConnection@718503e4]" name="runOtherTest1" duration-ms="2" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runOtherTest1 -->
+        <test-method status="PASS" signature="runOtherTest2()[pri:0, instance:com.testng.config.demo.TestDBConnection@718503e4]" name="runOtherTest2" duration-ms="1" started-at="2015-04-08T21:49:20Z" finished-at="2015-04-08T21:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runOtherTest2 -->
+      </class> <!-- com.testng.config.demo.TestDBConnection -->
+    </test> <!-- case2 -->
+  </suite> <!-- TestAll -->
+</testng-results>

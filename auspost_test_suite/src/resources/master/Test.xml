@@ -1,0 +1,66 @@
+<suite name="AusPostTest" verbose="10" >
+   <parameter name="site" value="AusPost" />
+   <parameter name="locale" value="en-AU" />
+   <parameter name="channel" value="Shop" />
+   <parameter name="selenium.host" value="localhost" />
+   <parameter name="selenium.browser" value= "*firefox" />
+   <parameter name="selenium.browser.version" value= "37" />
+   
+    <listeners>
+       <listener class-name="com.intershop.testframework.utils.SuiteReportUtils"/>
+       <listener class-name="com.intershop.testframework.utils.ReportUtil"/>
+    </listeners>
+   
+ <!-- Smoke test cases start-->
+ 	  <test name="SmokeTest1" preserve-order="true">
+	    <classes>
+	      <class name="com.intershop.main.jumpstart.JumpStartSiteNavigationTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<include name="registrationPage" />
+				<include name="completeRegistration"/>
+				<include name="updateProfile"/>
+				<include name="clickAddressBook" />
+				<include name="clickAddNewBillAddress" />
+				<include name="newBillingDetails">
+					<parameter name="xmlMethodName" value="newBillingDetailsComplete"/>
+				</include>				
+				<include name="viewPostAndParcelLandingPage" />
+				<include name="viewAllProducts" />				
+				<include name="addToCart" />
+				<include name="viewCart" />
+				<include name="selectShippingLocation" />
+				<include name="proceedToCheckout" />				
+				<include name="saveCart">
+					<parameter name="xmlMethodName" value="signedInSaveCart"/>	
+				</include>
+				<include name="myShopAccount" />
+				<include name="clickSaveCarts" />
+				<include name="viewSavedCart"/>
+				<include name="checkoutFromSavedCart"/>	
+				<include name="confirmCheckoutFromSavedCart"/>
+				<include name="updateProductQuantity">
+					<parameter name="xmlMethodName" value="updateProductQuantity10"/>
+				</include>
+				<include name="selectShippingLocation2" />
+				<include name="checkRoundupTotal" />
+				<include name="verifyRoundUpDonation" />
+				<include name="navigateToYourDetails"/>				
+				<include name="navigateToDeliveryDetails"/>
+				<include name="verifyShippingLocation"/>
+				<include name="navigateToPaymentPage"/>
+				<include name="testPaymentData"/>
+				<include name="completePayment"/>
+				<include name="verifyOrderConfirmation"/>				
+				<include name="signOut" />
+	        	<include name="delay">
+	        		<parameter name="milliseconds" value="30000"/>
+				</include>
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 	
+ 	
+ 	 <!-- Smoke test cases end-->
+ </suite>

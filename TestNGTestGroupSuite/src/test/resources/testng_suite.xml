@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+	<test name="order">
+		<classes>
+			<class name="com.testng.suite.demo.TestSuiteConfig" />
+			<class name="com.testng.suite.demo.TestSuiteOrder" />
+		</classes>
+	</test>
+
+	<test name="database">
+		<classes>
+			<class name="com.testng.suite.demo.TestSuiteConfig" />
+			<class name="com.testng.suite.demo.TestSuiteDatabase" />
+		</classes>
+	</test>
+
+</suite>

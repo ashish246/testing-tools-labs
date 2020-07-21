@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="33" started-at="2015-04-08T13:52:29Z" finished-at="2015-04-08T13:52:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="33" started-at="2015-04-08T13:52:29Z" finished-at="2015-04-08T13:52:30Z">
+      <class name="com.testng.factory.demo.FactoryWithDataProviderTest">
+        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:com.testng.factory.demo.FactoryWithDataProviderTest@24177697]" name="testMethodOne" duration-ms="13" started-at="2015-04-08T23:52:29Z" finished-at="2015-04-08T23:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodOne -->
+        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:com.testng.factory.demo.FactoryWithDataProviderTest@6ac604]" name="testMethodOne" duration-ms="1" started-at="2015-04-08T23:52:30Z" finished-at="2015-04-08T23:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodOne -->
+        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:com.testng.factory.demo.FactoryWithDataProviderTest@24177697]" name="testMethodTwo" duration-ms="1" started-at="2015-04-08T23:52:30Z" finished-at="2015-04-08T23:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodTwo -->
+        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:com.testng.factory.demo.FactoryWithDataProviderTest@6ac604]" name="testMethodTwo" duration-ms="1" started-at="2015-04-08T23:52:30Z" finished-at="2015-04-08T23:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodTwo -->
+      </class> <!-- com.testng.factory.demo.FactoryWithDataProviderTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

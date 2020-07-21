@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestDependency" duration-ms="54" started-at="2015-04-08T12:55:12Z" finished-at="2015-04-08T12:55:12Z">
+    <groups>
+      <group name="db">
+        <method signature="TestDatabase.initDB()[pri:0, instance:com.testng.dependent.demo.TestDatabase@285211ef]" name="initDB" class="com.testng.dependent.demo.TestDatabase"/>
+        <method signature="TestDatabase.testConnection()[pri:0, instance:com.testng.dependent.demo.TestDatabase@285211ef]" name="testConnection" class="com.testng.dependent.demo.TestDatabase"/>
+      </group> <!-- db -->
+      <group name="deploy">
+        <method signature="TestServer.deployServer()[pri:0, instance:com.testng.dependent.demo.TestServer@292898f5]" name="deployServer" class="com.testng.dependent.demo.TestServer"/>
+        <method signature="TestServer.deployBackUpServer()[pri:0, instance:com.testng.dependent.demo.TestServer@292898f5]" name="deployBackUpServer" class="com.testng.dependent.demo.TestServer"/>
+      </group> <!-- deploy -->
+    </groups>
+    <test name="TestCase1" duration-ms="54" started-at="2015-04-08T12:55:12Z" finished-at="2015-04-08T12:55:12Z">
+      <class name="com.testng.dependent.demo.TestServer">
+        <test-method status="PASS" signature="deployServer()[pri:0, instance:com.testng.dependent.demo.TestServer@292898f5]" name="deployServer" duration-ms="18" started-at="2015-04-08T22:55:12Z" finished-at="2015-04-08T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deployServer -->
+        <test-method status="PASS" signature="deployBackUpServer()[pri:0, instance:com.testng.dependent.demo.TestServer@292898f5]" name="deployBackUpServer" duration-ms="1" started-at="2015-04-08T22:55:12Z" depends-on-methods="com.testng.dependent.demo.TestServer.deployServer" finished-at="2015-04-08T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deployBackUpServer -->
+      </class> <!-- com.testng.dependent.demo.TestServer -->
+      <class name="com.testng.dependent.demo.TestDependsOnGroup">
+        <test-method status="PASS" signature="method1()[pri:0, instance:com.testng.dependent.demo.TestDependsOnGroup@66aa50f]" name="method1" duration-ms="1" depends-on-groups="db, deploy" started-at="2015-04-08T22:55:12Z" finished-at="2015-04-08T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method1 -->
+        <test-method status="PASS" signature="method2()[pri:0, instance:com.testng.dependent.demo.TestDependsOnGroup@66aa50f]" name="method2" duration-ms="1" started-at="2015-04-08T22:55:12Z" depends-on-methods="com.testng.dependent.demo.TestDependsOnGroup.method1" finished-at="2015-04-08T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method2 -->
+      </class> <!-- com.testng.dependent.demo.TestDependsOnGroup -->
+      <class name="com.testng.dependent.demo.TestDatabase">
+        <test-method status="PASS" signature="initDB()[pri:0, instance:com.testng.dependent.demo.TestDatabase@285211ef]" name="initDB" duration-ms="1" depends-on-groups="deploy" started-at="2015-04-08T22:55:12Z" finished-at="2015-04-08T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDB -->
+        <test-method status="PASS" signature="testConnection()[pri:0, instance:com.testng.dependent.demo.TestDatabase@285211ef]" name="testConnection" duration-ms="1" started-at="2015-04-08T22:55:12Z" depends-on-methods="com.testng.dependent.demo.TestDatabase.initDB" finished-at="2015-04-08T22:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConnection -->
+      </class> <!-- com.testng.dependent.demo.TestDatabase -->
+    </test> <!-- TestCase1 -->
+  </suite> <!-- TestDependency -->
+</testng-results>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="executeTestsForFirefox" name="Ant file for TestNG Firefox">
+	
+	<!-- Directory path of compiled classes(i.e *.class) -->
+	<path id="classes">
+		<pathelement location="bin"/>
+		<fileset dir="lib">
+			<include name="**/*.jar"/>
+			</fileset>
+	</path>
+	<!-- Directory name where the TestNG report will be saved. -->
+	<property name="testng.firefox.output.dir" value="testng_output/firefox_${browserVersion}/${testName}"/>
+
+	<!-- Directory name where the TestNG report in Testlink format will be saved. -->
+	<property name="testng.firefox.testlink.output.dir" value="testng_output/testlink/firefox_${browserVersion}/${testName}"/>
+						
+
+	<!--
+	  Target to run TestNG. It will run according to what are defined in testng.xml.
+	  The report will be saved at .testng_output/index.html.
+	-->
+	
+	<!-- TestNG execution for Firefox-->
+   <target name="executeTestsForFirefox" depends="checkAvailableVersion">
+		<echo message="Test Name is ${testName}"/>
+		<mkdir dir="${testng.firefox.output.dir}"/><!-- Create the TestNG output directory. -->
+		<mkdir dir="${testng.firefox.testlink.output.dir}"/><!-- Create the testlink output directory. -->
+		<testng testnames="${testName}" outputdir="${testng.firefox.output.dir}" classpathref="classes"> 
+			<xmlfileset dir="." includes="src/resources/master/AusPost-en-AU-FF_${browserVersion}.xml"/> 
+		</testng>
+		<antcall target="prepareDataForTestLink">
+			<param name="testName" value="${testName}"/>
+		</antcall>
+   </target>
+				
+	<!-- TestNG report parsing for Firefox-->
+	<target name="prepareDataForTestLink"> 
+		<echo>Preparing data for TestLink</echo> 
+		<xmltask source="${testng.firefox.output.dir}/testng-results.xml" dest="${testng.firefox.testlink.output.dir}/testng-result.xml"/>
+		<xmltask source="${testng.firefox.testlink.output.dir}/testng-result.xml">
+			<call path="/testng-results/suite/test" target="changeClassName" buffer="testNode"> 
+				<param name="testName" path="@name"/> 
+			</call> 
+		</xmltask> 
+	</target> 
+	<target name="changeClassName"> 
+		<property name="testElementPath" value="/testng-results/suite/test[@name='${testName}']/class"/>
+		<xmltask source="${testng.firefox.testlink.output.dir}/testng-result.xml" dest="testng_output/testlink/firefox_${browserVersion}/${testName}/testng-result.xml">
+			<attr path="${testElementPath}" attr="name" value="${testName}"/>
+		</xmltask> 
+		<echo>Modfied class value of test ${testName}</echo> 
+	</target> 
+	<target name="checkAvailableVersion">
+		<available file="src/resources/master/AusPost-en-AU-FF_${browserVersion}.xml" property="versionAvailable"/>
+	    <fail unless="versionAvailable">Sorry! Automated test execution for ${browserName} ${browserVersion} is not yet covered.</fail>
+	</target>		
+</project>

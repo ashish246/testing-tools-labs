@@ -1,0 +1,13 @@
+[0.001][INFO]:      ChromeDriver 26.0.1383.0 D:\AusPost\Test Suit Automation\auspost_test_suite\drivers\chromedriver.exe
+[1.119][FINE]:      Initializing session with capabilities {
+   "browserName": "*chrome",
+   "loggingPrefs": {
+      "browser": "SEVERE",
+      "client": "SEVERE",
+      "driver": "SEVERE",
+      "server": "SEVERE"
+   },
+   "platform": "ANY",
+   "version": "26"
+}
+
